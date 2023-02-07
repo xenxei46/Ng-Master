@@ -7,18 +7,25 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { OnChangesComponent } from './on-changes/on-changes.component';
+import { OnchangesChildComponent } from './onchanges-child/onchanges-child.component';
 
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    OnChangesComponent,
+    OnchangesChildComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

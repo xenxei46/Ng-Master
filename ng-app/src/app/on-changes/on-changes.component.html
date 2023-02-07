@@ -1,0 +1,17 @@
+<h2>onChanges parent</h2>
+<p> {{ name }} </p>
+
+    <label for="hero-name">Hero name: </label>
+    <input type="text" id="hero-name" [(ngModel)]="hero"  #heroName/> <br>
+    <!-- <label for="hero-name">Hero power: </label>
+    <input type="text" id="hero-name" [(ngModel)]="power"  #heropower/><br> -->
+    <button (click)="addHero(heroName.value); heroName.value=''">
+        add Hero
+    </button>
+    {{ heroName.value }}
+    <!-- {{ heropower.value }} -->
+<br><br>
+
+<!-- {{heroForm}} -->
+<button (click)="changeMessage()">Change message</button>
+<app-onchanges-child (messageEvent)="onNameChange($event)" [herolist]="herolist" [hero]="hero" [power]="power" [name]="name"></app-onchanges-child>

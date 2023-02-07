@@ -1,0 +1,12 @@
+<h2>onchanges-child</h2>
+<P>{{ name }} </P>
+<h3>Hero List</h3>
+<button (click)="onNameChange()">change username</button>
+<ul>
+    <li *ngFor="let hero of herolist">
+        Hero name: {{ hero }}
+    </li>
+</ul>
+<div>
+    username: <p>{{ hero }}</p>
+</div>
