@@ -1,11 +1,11 @@
 <div class="w-full h-full">
-    <div class=" w-full h-[120vh] flex items-center justify-center">
-        <div class="w-[90%] h-full border-red-400">
+    <div class=" w-full lg:h-[120vh] md:h-[60vh] h-[60vh] flex items-center justify-center">
+        <div class="w-[90%] h-[60vh] lg:h-full border-red-400">
          <div class="w-full h-full">
             <div class="flex flex-wrap lg:flex-nowrap h-[100vh]">
-                <div class="flex flex-col w-[100%] lg:w-[50%]  h-full ">
+                <div class="flex flex-col w-[100%] lg:w-[50%]  h-[80%] lg:h-full ">
                     <div class="h-[30%] flex items-center justify-center">
-                        <h1 class="lg:w-[80%] display-3 text-white font-weight-bold">The most trusted &amp; secure crypto wallet</h1>
+                        <h1 class=" md:w-[70%] text-center md:text-center lg:text-start lg:w-[80%] display-3 text-white font-weight-bold">The most trusted &amp; secure crypto wallet</h1>
                     </div>
                     <div class="form flex justify-center">
                         <!-- <form #cryptoForm class="w-[80%]" (ngSubmit)="login()">
@@ -19,7 +19,7 @@
                         <p class="text-red-400">{{activePassword.value}}</p> -->
                         <form class="w-[80%]" #loginForm="ngForm" (ngSubmit)="login()">
                             <!-- Active password -->
-                            <div class="mb-6 w-[30vw] h-[5vh]">
+                            <div class="mb-6 lg:w-[30vw] w-[100%] h-[5vh]">
                                 <input type="password" name="ActivePassword" [(ngModel)]="credentials.ActivePassword"
                                  #password="ngModel"
                                  placeholder="Active Password" class="block w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
@@ -32,7 +32,7 @@
                                   </p>
                             </div>
                             <!-- OTP -->
-                            <div class="mb-6 w-[30vw] h-[5vh]">
+                            <div class="mb-6 lg:w-[30vw] w-[100%] h-[5vh]">
                                 <input type="password" name="password" [(ngModel)]="credentials.password"
                                  #Activepassword="ngModel"
                                  placeholder="OTP" class="block w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
@@ -44,8 +44,7 @@
                                     OTP required
                                   </p>
                             </div>
-                          
-
+                    
                             <button type="submit" [disabled]="loginForm.invalid"
                                 class="blockp-4 bg-blue-900 rounded-md px-8 text-white py-1.5 transition
                                  hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400">
@@ -58,8 +57,10 @@
                         
                     
                 </div>
-                <div class="flex  w-[100%]lg:w-[50%]">
-                    <img src="../../../assets/home_hero.png" class="object-contain"/>
+                <div class="flex items-center w-[100%] lg:w-[50%] h-full ">
+                    <div>
+                        <img src="../../../assets/home_hero.png" class="lg:object-contain"/>
+                    </div>  
                 </div>
             </div>
          </div>
