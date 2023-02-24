@@ -1,0 +1,184 @@
+<nav
+    class="relative flex flex-wrap items-center justify-between bg-blue-600 px-0 py-4 mb-3"
+    [class.header_change]="header_variable"
+>
+<div class="container-nav py-2 -px-4 mx-0 flex flex-wrap items-center justify-between w-full">
+    <div class="w-full relative flex justify-between lg:w-auto lg:px-4 lg:static lg:block lg:justify-start">
+        <!--logo-->
+
+        <a class="logo"  routerLink="/">
+            <img src="../../../assets/trust_logotype.svg" alt="trustwallet logo"/>
+        </a>
+
+        <a class="logo" [routerLink]="['/']">
+           
+        </a>
+        <!--mobile-menu -->
+        <button
+            class=" z-10 cursor-pointer leading-none px-3 py-1 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-24 md:ml-96"
+            type="button"
+            id="menu"
+            (click)="toggleMenu()"
+        >
+           <p class="bars">&#9776;</p>
+        </button>
+        <!--mobile menu-->
+    </div>
+    <!--nav-items-->
+    <div class="menu">
+        <nav [@slideInOut]="menuState" class="lg:hidden w-full">
+            <div class="nav-header flex w-[300] h-[103]">
+                <a class="logo flex-1" [routerLink]="['/']">
+                   
+                </a>
+                <span class="close-btn flex-1 flex justify-end w-1">
+                    <button
+                        class="text-white font-bold cursor-pointer text-3xl leading-none px-3 py-1 ml-2 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                        type="button"
+                        id="menu"
+                        (click)="toggleMenu()"
+                    >
+                        &times;
+                    </button>
+                </span>
+            </div>
+            <span class="nav-menu">
+                <ul>
+                    <li><a routerLink="/">Home</a></li>
+                    <li>
+                        <a
+                            class="button"
+                            routerLink="/about"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="button"
+                            [routerLink]="['/app/shop']"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                        >
+                            Shop</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="button"
+                            [routerLink]="['/fresh-content']"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                            >Fresh-content</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="button"
+                            [routerLink]="['/contact']"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </span>
+            <span class="social-links flex justify-center">
+                <ul class="flex justify-between">
+                    <li>
+                        <a class="text-white py-2 px-2" href="https://web.facebook.com/2wjstudios"
+                            ><i class="pi pi-facebook"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a class="text-white py-2 px-2" href="https://www.instagram.com/2wjstudios/"
+                            ><i class="pi pi-instagram"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-white py-2 px-2"
+                            href="https://www.youtube.com/channel/UC9gxq4vvTa4yvh3k6KyVOJQ"
+                            ><i class="pi pi-youtube"></i
+                        ></a>
+                    </li>
+                </ul>
+            </span>
+        </nav>
+    </div>
+
+    <div
+        [ngClass]="{ hidden: !showMenu, flex: showMenu }"
+        class="lg:flex lg:flex-grow items-center"
+        id="mobile-menu"
+    >
+        <ul class="nav-li flex flex-col lg:w-full lg:flex-row list-none justify-center mt-2 w-auto">
+            <li class="nav-item">
+                <a
+                    class="button"
+                    routerLink="/"
+                    routerLinkActive="activebutton"
+                    ariaCurrentWhenActive="page"
+                    class="px-3 py-2 flex items-center text-md  no-underline font-medium leading-snug"
+                    href="#pablo"
+                >
+                    <span class="ml-2">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="button"
+                    routerLink="/about"
+                    routerLinkActive="activebutton"
+                    ariaCurrentWhenActive="page"
+                    class="px-3 py-2 flex items-center text-md  no-underline font-medium  leading-snug"
+                    href="#pablo"
+                >
+                    <span class="ml-2">Staking</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="button"
+                    [routerLink]="['app/shop']"
+                    routerLinkActive="activebutton"
+                    ariaCurrentWhenActive="page"
+                    class="px-3 py-2 flex items-center text-md  no-underline font-medium  leading-snug"
+                    href="#pablo"
+                >
+                    <span class="ml-2">Browser Extension</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="button"
+                    routerLink="/fresh-content"
+                    routerLinkActive="activebutton"
+                    ariaCurrentWhenActive="page"
+                    class="px-3 py-2 flex items-center text-sm text-md  no-underline font-medium  leading-snug"
+                    href="#pablo"
+                >
+                    <span class="ml-2">Nfts</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="button"
+                    routerLink="/contact"
+                    routerLinkActive="activebutton"
+                    ariaCurrentWhenActive="page"
+                    class="px-3 py-2 flex items-center text-md  no-underline font-medium  leading-snug"
+                    href="#pablo"
+                >
+                    <span class="ml-2">DApp Browser</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+    
+
+
+

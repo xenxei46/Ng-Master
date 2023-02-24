@@ -1,0 +1,14 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.display-3 {
+    line-height: 1.2;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
