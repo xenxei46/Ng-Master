@@ -1,13 +1,16 @@
 <div class="w-full h-full">
-    <div class=" w-full lg:h-[120vh] md:h-[60vh] h-[60vh] flex items-center justify-center">
-        <div class="w-[90%] h-[60vh] lg:h-full border-red-400">
+    <div class=" w-full lg:h-[120vh] md:h-[80vh] h-[80vh] flex items-center justify-center">
+        <div class="w-[90%] h-[80vh] lg:h-full ">
          <div class="w-full h-full">
             <div class="flex flex-wrap lg:flex-nowrap h-[100vh]">
                 <div class="flex flex-col w-[100%] lg:w-[50%]  h-[80%] lg:h-full ">
-                    <div class="h-[30%] flex items-center justify-center">
-                        <h1 class=" md:w-[70%] text-center md:text-center lg:text-start lg:w-[80%] display-3 text-white font-weight-bold">The most trusted &amp; secure crypto wallet</h1>
+                    <div class="h-[30%] flex items-center justify-center py-4">
+                        <h1 class=" md:w-[70%] 
+                        text-center md:text-center lg:text-start 
+                        lg:w-[80%] display-3 text-white font-weight-bold">
+                        The most trusted &amp; secure crypto wallet</h1>
                     </div>
-                    <div class="form flex justify-center">
+                    <div class="form flex flex-col items-center justify-center">
                         <!-- <form #cryptoForm class="w-[80%]" (ngSubmit)="login()">
                             <input placeholder="Active password " type="password
                             " class="w-[30vw] h-[5vh] rounded-lg p-4 " id="active-password" #activePassword/><br><br>
@@ -17,17 +20,20 @@
                             <button type="submit" class="p-4 bg-blue-900 rounded-md px-8 text-white">Submit</button>
                         </form>
                         <p class="text-red-400">{{activePassword.value}}</p> -->
-                        <form class="w-[80%]" #loginForm="ngForm" (ngSubmit)="login()">
+                        <form class="w-[80%] py-2" #loginForm="ngForm" (ngSubmit)="login() ">
                             <!-- Active password -->
                             <div class="mb-6 lg:w-[30vw] w-[100%] h-[5vh]">
-                                <input type="password" name="ActivePassword" [(ngModel)]="credentials.ActivePassword"
+                                <input type="password" name="ActivePassword"
+                                 [(ngModel)]="credentials.ActivePassword"
                                  #password="ngModel"
-                                 placeholder="Active Password" class="block w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
+                                 placeholder="Active Password" class="block 
+                                 w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
                                 duration-500 focus:outline-none rounded bg-white
                                 focus:border-indigo-400" 
                                 required 
                                  />
-                                 <p *ngIf="password.errors && password.touched && password.dirty" class="text-red-400">
+                                 <p *ngIf="password.errors && password.touched && password.dirty" 
+                                 class="text-red-400">
                                     Enter Password
                                   </p>
                             </div>
@@ -35,36 +41,44 @@
                             <div class="mb-6 lg:w-[30vw] w-[100%] h-[5vh]">
                                 <input type="password" name="password" [(ngModel)]="credentials.password"
                                  #Activepassword="ngModel"
-                                 placeholder="OTP" class="block w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
+                                 placeholder="OTP" class="block w-full py-1.5 px-3
+                                   text-blue-400 border-2 border-gray-400 transition
                                 duration-500 focus:outline-none rounded bg-white
                                 focus:border-indigo-400" 
                                 required 
                                  />
-                                 <p *ngIf="Activepassword.errors && Activepassword.touched && Activepassword.dirty" class="text-red-400">
+                                 <p *ngIf="Activepassword.errors && Activepassword.touched && 
+                                 Activepassword.dirty" class="text-red-400">
                                     OTP required
                                   </p>
                             </div>
-                    
+                            <!-- submit btn  -->
                             <button type="submit" [disabled]="loginForm.invalid"
                                 class="blockp-4 bg-blue-900 rounded-md px-8 text-white py-1.5 transition
                                  hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400">
                                  Submit
                             </button>
                         </form>
+                        <div class="w-[80%]">
+                            <p class="lead text-center md:text-start lg:text-start  text-white-90 lead mb-4">Buy, store, collect NFTs, exchange &amp; earn crypto. Join 25 million+ people using Trust Wallet.</p>
+                        </div>
                         <!-- <div>{{ loginForm.valid}}</div>  -->
                     </div>
-                    <!-- <div>{{ loginForm.autocomplete }}</div>  -->
-                        
-                    
+                    <!-- <div>{{ loginForm.autocomplete }}</div>  --> 
                 </div>
-                <div class="flex items-center w-[100%] lg:w-[50%] h-full ">
+                <div class="flex items-center w-[100%] lg:w-[50%] lg:h-full h-[60%]">
                     <div>
                         <img src="../../../assets/home_hero.png" class="lg:object-contain"/>
                     </div>  
                 </div>
             </div>
-         </div>
         </div> 
     </div>
 </div>
+
+<!-- <div class="w-full h-[100vh] bg-white relative">
+    <div class="w-[90%] h-[80%]">
+
+    </div>
+</div> -->
 
