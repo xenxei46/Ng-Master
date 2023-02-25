@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-   window.alert('Pin Required');
+   window.alert('Incorrect Password');
   //  this.toastr.success('Hello world!', 'Toastr fun!');
   }
 }

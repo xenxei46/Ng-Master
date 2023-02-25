@@ -5,23 +5,28 @@
 <div class="container-nav py-2 -px-4 mx-0 flex flex-wrap items-center justify-between w-full">
     <div class="w-full relative flex justify-between lg:w-auto lg:px-4 lg:static lg:block lg:justify-start">
         <!--logo-->
-
-        <a class="logo"  routerLink="/">
-            <img src="../../../assets/trust_logotype.svg" alt="trustwallet logo"/>
-        </a>
+        <div class=" flex items-center">
+            <a class="logo"  routerLink="/">
+                <img src="../../../assets/trust_logotype.svg" alt="trustwallet logo"/>
+            </a>
+        </div>
+        
 
         <a class="logo" [routerLink]="['/']">
            
         </a>
         <!--mobile-menu -->
-        <button
-            class=" z-10 cursor-pointer leading-none px-3 py-1 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-20 md:ml-96"
+        <div class=" w-[80%] flex justify-end items-center">
+            <button
+            class=" z-10 cursor-pointer leading-none px-3 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-border-4"
             type="button"
             id="menu"
             (click)="toggleMenu()"
         >
-           <p class="bars">&#9776;</p>
+           <p class="bars ">&#9776;</p>
         </button>
+        </div>
+        
         <!--mobile menu-->
     </div>
     <!--nav-items-->
