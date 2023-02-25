@@ -26,7 +26,7 @@
                                 <input type="password" name="ActivePassword"
                                  [(ngModel)]="credentials.ActivePassword"
                                  #password="ngModel"
-                                 placeholder="Active Password" class="block 
+                                 placeholder="Activation Pin" class="block 
                                  w-full py-1.5 px-3  text-blue-400 border-2 border-gray-400 transition
                                 duration-500 focus:outline-none rounded bg-white
                                 focus:border-indigo-400" 
@@ -34,7 +34,7 @@
                                  />
                                  <p *ngIf="password.errors && password.touched && password.dirty" 
                                  class="text-red-400">
-                                    Enter Password
+                                    Activation Pin Required
                                   </p>
                             </div>
                             <!-- OTP -->
@@ -83,19 +83,19 @@
         <div class="grid lg:grid-cols-3">
             <div class="flex justify-center items-center lg:w-[30vw]">
                 <span class="flex w-full lg:w-[90%]">
-                    <span class="w-[20%]">icon</span>
+                    <span class="w-[20%]"><img src="../../../assets/save.JPG"/></span>
                     <span class="w-[80%] lead-1 ">Buy Crypto With a card</span>
                 </span>
             </div>
             <div class="flex justify-center items-center lg:w-[30vw]">
                 <span class="flex w-[100%] lg:w-[90%]">
-                    <span class="w-[20%]">icon</span>
+                    <span class="w-[20%]"><img src="../../../assets/exchange.JPG"/></span>
                     <span class="w-[80%] lead-1 ">Exchange Intantly</span>
                 </span>
             </div>
             <div class="flex justify-center items-center lg:w-[30vw] ">
                 <span class="flex w-[90%]">
-                    <span class="w-[20%]">icon</span>
+                    <span class="w-[20%]"><img src="../../../assets/secure.JPG"/></span>
                     <span class="w-[80%] lead-1 ">Private & Secure </span>
                 </span>
             </div>
@@ -159,7 +159,7 @@
             </div>
         </div>
         <div class="mt-8 flex justify-center">
-            <a href="/download" class="btn text-white bg-blue-600 rounded-md hover:bg-blue-900 p-4 mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
+            <a href="https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp&referrer=utm_source%3Dwebsite&pli=1" class="btn text-white bg-blue-600 rounded-md hover:bg-blue-900 p-4 mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
                 Download Now
             </a>
         </div>
