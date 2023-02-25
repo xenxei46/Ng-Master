@@ -15,7 +15,7 @@
         </a>
         <!--mobile-menu -->
         <button
-            class=" z-10 cursor-pointer leading-none px-3 py-1 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-24 md:ml-96"
+            class=" z-10 cursor-pointer leading-none px-3 py-1 border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-20 md:ml-96"
             type="button"
             id="menu"
             (click)="toggleMenu()"
@@ -44,14 +44,14 @@
             </div>
             <span class="nav-menu">
                 <ul>
-                    <li><a routerLink="/">Home</a></li>
+                    <li><a routerLink="/">Assets</a></li>
                     <li>
                         <a
                             class="button"
                             routerLink="/about"
                             routerLinkActive="activebutton"
                             ariaCurrentWhenActive="page"
-                            >About Us</a
+                            ></a
                         >
                     </li>
                     <li>
@@ -61,7 +61,7 @@
                             routerLinkActive="activebutton"
                             ariaCurrentWhenActive="page"
                         >
-                            Shop</a
+                            Staking</a
                         >
                     </li>
                     <li>
@@ -70,7 +70,7 @@
                             [routerLink]="['/fresh-content']"
                             routerLinkActive="activebutton"
                             ariaCurrentWhenActive="page"
-                            >Fresh-content</a
+                            >Browser Extension</a
                         >
                     </li>
                     <li>
@@ -79,7 +79,16 @@
                             [routerLink]="['/contact']"
                             routerLinkActive="activebutton"
                             ariaCurrentWhenActive="page"
-                            >Contact</a
+                            >Nfts </a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="button"
+                            [routerLink]="['/contact']"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                            >DApp Browser </a
                         >
                     </li>
                 </ul>
