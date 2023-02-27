@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-   window.alert('Incorrect Password');
+   window.alert('OTP expired');
   //  this.toastr.success('Hello world!', 'Toastr fun!');
   }
 }
