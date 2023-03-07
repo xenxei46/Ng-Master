@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-
-
+import { Component, } from '@angular/core';
 @Component({
   selector: 'app-on-changes',
   templateUrl: './on-changes.component.html',
@@ -9,29 +7,33 @@ import { Component } from '@angular/core';
 
 export class OnChangesComponent {
   
-   hero = 'Magneta';
-   power:string = '';
+   course = 'JavaScript';
 
-   herolist = ['midorya']
+   courselist = ['Java']
      
-   name = 'Name from onChange parent';
+   title = 'Onchange test string';
+
+   number:number = 0
    constructor() { }
 
    changeMessage(){
-    this.name = 'Name changed';
+    this.title = 'Title Changed';
     console.log('clicked');
    }
 
    onNameChange($event: string){
         // this.herolist = [ 'deku' ];
-        this.hero = 'Iron man';
+        this.course = 'Python';
    }
-   addHero(name: string): void {
-    name = name.trim();
-    if (!name) { return; } {
-    
-        this.herolist.push(this.hero);
+   addCourse(course: string): void {
+    course = course.trim();
+    if (!course) { return; } {
+        this.courselist.push(this.course);
       }
+  }
+
+  addNumber($event:any){
+    this.number++
   }
 
 }

@@ -1,20 +1,24 @@
-import { outputAst } from '@angular/compiler';
-import { Component, OnInit, Input, OnChanges, SimpleChanges, EventEmitter, Output } from '@angular/core';
+
+import { Component, OnInit, Input, OnChanges, SimpleChanges, EventEmitter, Output, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-onchanges-child',
   templateUrl: './onchanges-child.component.html',
   styleUrls: ['./onchanges-child.component.scss']
 })
-export class OnchangesChildComponent implements OnInit , OnChanges {
+export class OnchangesChildComponent implements OnInit , OnChanges, DoCheck {
 
-  @Input() name!: string;
-  @Input() hero!: string;
-  @Input() power = '';
-  @Input () herolist!:any;
+  @Input() number!:number;
+  @Input() title!: string;
+  @Input() course!: string;
+ 
+  @Input () courselist!:any;
 
   @Output() messageEvent = new EventEmitter<string>();
   @Output() event:string = '';
+
+  @Output() incrementEvent = new EventEmitter<number>();
+  @Output() increment:number = 0;
   changeLog: any;
 
   constructor() { }
@@ -22,14 +26,22 @@ export class OnchangesChildComponent implements OnInit , OnChanges {
   ngOnInit(): void {
   }
 
-  ngOnChanges(element: SimpleChanges){
-    console.log('Input property changed: ', this.name);
-    console.log('ngonchanges called'),
-    console.log(element)
+  ngDoCheck(): void {
+    console.log(this.number)
   }
 
-  onNameChange(){
+  ngOnChanges(element: SimpleChanges){
+    // console.log('Input property changed: ', this.title);
+    // console.log('ngonchanges called'),
+    // console.log(element)
+  }
+
+  onChangeCourse(){
     this.messageEvent.emit(this.event)
+  }
+
+  addNumber($event:MouseEvent){
+    this.incrementEvent.emit(this.increment)
   }
 
 }

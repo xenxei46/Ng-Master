@@ -9,13 +9,15 @@ import { NavComponent } from './shared/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule , FormsModule} from '@angular/forms';
+import { UserdetailsComponent } from './user/userdetails/userdetails.component';
 // import { formsmodul}
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InputComponent,
-    NavComponent
+    NavComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,

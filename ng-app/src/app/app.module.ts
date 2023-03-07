@@ -11,6 +11,7 @@ import { OnChangesComponent } from './on-changes/on-changes.component';
 import { OnchangesChildComponent } from './onchanges-child/onchanges-child.component';
 
 import { FormsModule } from '@angular/forms';
+import { DocheckComponent } from './docheck/docheck.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     LifecycleComponent,
     OnChangesComponent,
     OnchangesChildComponent,
+    DocheckComponent,
   
   ],
   imports: [
