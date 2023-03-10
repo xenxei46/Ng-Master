@@ -13,7 +13,6 @@ export class OnChangesComponent {
      
    title = 'Onchange test string';
 
-   number:number = 0
    constructor() { }
 
    changeMessage(){
@@ -25,15 +24,12 @@ export class OnChangesComponent {
         // this.herolist = [ 'deku' ];
         this.course = 'Python';
    }
-   addCourse(course: string): void {
-    course = course.trim();
-    if (!course) { return; } {
-        this.courselist.push(this.course);
-      }
-  }
+  //  addCourse(course: string): void {
+  //   course = course.trim();
+  //   if (!course) { return; } {
+  //       this.courselist.push(this.course);
+  //     }
+  // }
 
-  addNumber($event:any){
-    this.number++
-  }
 
 }

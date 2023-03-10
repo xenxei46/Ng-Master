@@ -31,18 +31,18 @@ export class OnchangesChildComponent implements OnInit , OnChanges, DoCheck {
   }
 
   ngOnChanges(element: SimpleChanges){
-    // console.log('Input property changed: ', this.title);
-    // console.log('ngonchanges called'),
-    // console.log(element)
+    console.log('Input property changed: ', this.title);
+    console.log('ngonchanges called'),
+    console.log(element)
   }
 
   onChangeCourse(){
     this.messageEvent.emit(this.event)
   }
 
-  addNumber($event:MouseEvent){
-    this.incrementEvent.emit(this.increment)
-  }
+  // addNumber($event:MouseEvent){
+  //   this.incrementEvent.emit(this.increment)
+  // }
 
 }
  

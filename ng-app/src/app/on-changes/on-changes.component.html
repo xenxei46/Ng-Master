@@ -2,16 +2,11 @@
 <p> {{title }} </p>
     <label for="course-name">Course name: </label>
     <input type="text" id="course-name" [(ngModel)]="course"  #courseName/> <br>
-    <button (click)="addCourse(courseName.value); courseName.value=''">
-        add Course
-    </button>
-    {{ courseName.value }}
-    {{number}}
 <br><br>
 
 <!-- {{heroForm}} -->
 
 <button (click)="changeMessage()">Change message</button>
-<button (click)="addNumber($event)">+</button>
 
-<app-onchanges-child (messageEvent)="onNameChange($event)" (incrementEvent)="addNumber($event)" [courselist]="courselist" [course]="course" [title]="title"></app-onchanges-child>
+
+<app-onchanges-child (messageEvent)="onNameChange($event)" [courselist]="courselist" [course]="course" [title]="title"></app-onchanges-child>

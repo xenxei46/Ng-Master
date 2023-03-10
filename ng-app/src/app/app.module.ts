@@ -12,6 +12,9 @@ import { OnchangesChildComponent } from './onchanges-child/onchanges-child.compo
 
 import { FormsModule } from '@angular/forms';
 import { DocheckComponent } from './docheck/docheck.component';
+import { AfterviewInitComponent } from './afterview-init/afterview-init.component';
+import { AfterContentInitComponent } from './after-content-init/after-content-init.component';
+import { AfterContentCheckedComponent } from './after-content-checked/after-content-checked.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,9 @@ import { DocheckComponent } from './docheck/docheck.component';
     OnChangesComponent,
     OnchangesChildComponent,
     DocheckComponent,
+    AfterviewInitComponent,
+    AfterContentInitComponent,
+    AfterContentCheckedComponent,
   
   ],
   imports: [

@@ -1,19 +1,34 @@
-const http = require('http');
 
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+
+const app = express();
+// const port = process.env.PORT || 4000;
+const port = 4000;
 const hostname = '127.0.0.1';
-const port = 3000;
+const fruits = require('./fruits'); 
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extend: false }));
+app.use((req, res, next) =>  {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, x-Requested-with, Content-Type, Accept'
+  );
   res.end('Hello Universe\n');
+  next();
 });
 
-server.listen(port, hostname, () => {
-  console.log(`
-  Server running at http://${hostname}:${port}/`);
-}
-);
+// app.get('./fruits.js', (req, res) => {
+//   res.end(fruits);
+// });
+const routes = require('./routes/routes.js')(app, fs);
+
+app.listen(port, () => {
+  console.log(`server started at http://${hostname}:${port}/`);
+});
 
 /********/
 
@@ -88,3 +103,20 @@ server.listen(port, hostname, () => {
 // app.listen(port, () => {
 //     console.log(`listening at http://localhost:${post}`)
 // })
+
+// const http = require('http');
+
+// const hostname = '127.0.0.1';
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.end('Hello Universe\n');
+// });
+
+// server.listen(port, hostname, () => {
+//   console.log(`
+//   Server running at http://${hostname}:${port}/`);
+// }
+// );
